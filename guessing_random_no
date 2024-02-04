@@ -3,11 +3,11 @@ attempt=0
 while True:
     no=random.randint(1,10)
     attempt+=1
-    guess=int(input('Enter no: '))
+    guess=int(input('Please guess a no between 1 to 10: '))
     if guess<=0:
-        print('Please guess a no between 1 to 10' )
+        print('Your guess was less than 0,\nPlease guess a no between 1 to 10' )
     elif guess>10:
-        print('Please guess a no between 1 to 10')
+        print('Your guess was greater than 10,\nPlease guess a no between 1 to 10')
     else:
         if guess==no:
             print('Your guess is correct')
