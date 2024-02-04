@@ -5,9 +5,9 @@ while True:
     attempt+=1
     guess=int(input('Please guess a no between 1 to 10: '))
     if guess<=0:
-        print('Your guess was less than 0,\nPlease guess a no between 1 to 10' )
+        print('Your guess was less than 0, Please guess a no between 1 to 10' )
     elif guess>10:
-        print('Your guess was greater than 10,\nPlease guess a no between 1 to 10')
+        print('Your guess was greater than 10, Please guess a no between 1 to 10')
     else:
         if guess==no:
             print('Your guess is correct')
