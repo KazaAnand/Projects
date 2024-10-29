@@ -1,0 +1,52 @@
+class ATM:
+    balance=500
+    def Balance(self):
+        print('Balance:  ',self.balance)
+
+    def Deposite(self):
+        amount=float(input('Enter deposite amount: '))
+        if  amount>0:
+            self.balance+=amount
+            print("f,Deposite amount {amount}rs is successfully added")
+            print(self.balance)
+        else:
+            print('Invalid amount')
+
+    def Withdraw(self):
+        WithdrawAmount=int(input('Enter withdraw amount:  '))
+        if WithdrawAmount<=self.balance:
+            self.balance-=WithdrawAmount
+            print(f"Withdraw amount {WithdrawAmount}rs is successfully withdrawn")
+            print('Balance about: ',self.balance)
+        else:
+            print('unable to withdraw amount')
+
+    def Exit(self):
+        print('Thank you!, Have a nice day')
+        quit()
+    def run(self):
+        flag=True
+        while flag:
+            print()
+            print('* * * ATM Machine * * *  ')
+            print()
+            print('''Choose your option: 
+1.Balanece
+2.Deposit
+3.Withdraw
+4.Exit''')
+            option=int(input('Enter your option: '))
+            if option==1:
+                self.Balance()
+            elif option==2:
+                self.Deposite()
+            elif  option==3:
+                self.Withdraw()
+            elif  option==4:
+                self.Exit()
+            else:
+                print('Invalid option')  
+    
+
+a=ATM()
+a.run()
