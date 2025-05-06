@@ -1,0 +1,77 @@
+import java.util.*;
+
+class Student {
+    String id;
+    String name;
+    int[] marks = new int[3]; // marks for 3 subjects
+
+    public Student(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public void setMarks(int[] marks) {
+        this.marks = marks;
+    }
+
+    public double calculateAverage() {
+        int total = 0;
+        for (int mark : marks) total += mark;
+        return total / 3.0;
+    }
+}
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        List<Student> students = new ArrayList<>();
+
+        while (true) {
+            System.out.println("\n--- Student Grade System ---");
+            System.out.println("1. Add Student");
+            System.out.println("2. Enter Marks");
+            System.out.println("3. View Report");
+            System.out.println("4. Exit");
+            int choice = sc.nextInt();
+
+            if (choice == 1) {
+                System.out.print("Enter Student ID: ");
+                String id = sc.next();
+                System.out.print("Enter Name: ");
+                String name = sc.next();
+                students.add(new Student(id, name));
+                System.out.println("Student Added!");
+
+            } else if (choice == 2) {
+                System.out.print("Enter Student ID: ");
+                String id = sc.next();
+                for (Student s : students) {
+                    if (s.id.equals(id)) {
+                        int[] marks = new int[3];
+                        for (int i = 0; i < 3; i++) {
+                            System.out.print("Enter mark " + (i + 1) + ": ");
+                            marks[i] = sc.nextInt();
+                        }
+                        s.setMarks(marks);
+                        System.out.println("Marks Added!");
+                    }
+                }
+
+            } else if (choice == 3) {
+                for (Student s : students) {
+                    System.out.println("\nID: " + s.id + ", Name: " + s.name);
+                    System.out.println("Average: " + s.calculateAverage());
+                }
+
+            } else if (choice == 4) {
+                System.out.println("Exiting...");
+                break;
+            } else {
+                System.out.println("Invalid Option");
+            }
+        }
+        sc.close();
+    }
+}
