@@ -37,7 +37,7 @@ StuDB/
 │
 ├── StudentDetails.java        # Stores individual student info and marks
 ├── StudentManagement.java     # Handles all CRUD operations and sorting
-└── StudentApp.java                  # Console-based menu and program execution
+└── StudentApp.java            # Console-based menu and program execution
 ```
 
 ---
