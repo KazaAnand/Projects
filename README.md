@@ -37,14 +37,14 @@ StuDB/
 │
 ├── StudentDetails.java        # Stores individual student info and marks
 ├── StudentManagement.java     # Handles all CRUD operations and sorting
-└── Main.java                  # Console-based menu and program execution
+└── StudentApp.java                  # Console-based menu and program execution
 ```
 
 ---
 
 ## ⚙️ How It Works
 
-1. Run the program from `Main.java`.
+1. Run the program from `StudentApp.java`.
 2. Choose an option from the console menu (Add, Update, Display, Sort, etc.).
 3. Enter required details (roll no, marks, etc.).
 4. View results instantly — marks, percentage, and grades are auto-calculated.
